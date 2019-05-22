@@ -1,0 +1,5 @@
+p, *, /login,*
+p, *, /logout, *
+p, ADMIN, /admin/*, *
+p, USER, /user/*, *
+

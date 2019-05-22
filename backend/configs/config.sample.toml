@@ -1,0 +1,9 @@
+#server port
+port= PORT
+siteurl=SITE_URL
+environment=0 #production=1 or developement=0
+databaseserver= HOST_NAME
+databasename= DATABASE
+username= DATABASE_USERNAME
+password= DATABASE_PASSWORD
+logfile="FULL_LOG_FILE_PATH"

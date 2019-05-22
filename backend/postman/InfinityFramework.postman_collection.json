@@ -1,0 +1,719 @@
+{
+	"info": {
+		"_postman_id": "9d392b6d-aa11-459a-8550-26b3dc2961fc",
+		"name": "InfinityFramework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "USER POST",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1QGFkbWluLmNvbSIsInVzZXJUeXBlIjoiQURNSU4iLCJleHAiOjE1NTc5MDY2Mzl9.kIzuw2tivrPUMxEdep_mvvWanM8SUhlSsHM3kJI7SF4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"user@user.com\",\n    \"name\": \"User\",\n    \"password\": \"pass\",\n    \"designation\": \"Dev\",\n    \"empID\": \"EMP002\",\n    \"userType\": \"USER\",\n    \"userStatus\": true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/users/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"users",
+										""
+									]
+								},
+								"description": "Body:\n{\n    \"email\": \"<Email ID|>\",\n    \"name\": \"<Name/Leave Blank>\",\n    \"password\": \"<Password/Leave Blank>\",\n    \"designation\": \"<Designation of User/>\",\n    \"empID\": \"<Employee ID of User|>\",\n    \"userType\": \"<USER/ADMIN>\",\n    \"userStatus\": <true/false>\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "USER GET ALL",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1QGFkbWluLmNvbSIsInVzZXJUeXBlIjoiQURNSU4iLCJleHAiOjE1NTg0MzUxODR9.dEggNzMOuRnbsqMjh28lfXauvCbappGJZSldYLGyvPs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/users/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "USER GET BY EMAIL",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1QGFkbWluLmNvbSIsInVzZXJUeXBlIjoiQURNSU4iLCJleHAiOjE1NTg0MzUxODR9.dEggNzMOuRnbsqMjh28lfXauvCbappGJZSldYLGyvPs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/users/id/:user@user.com",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"users",
+										"id",
+										":user@user.com"
+									],
+									"variable": [
+										{
+											"key": "user",
+											"value": ""
+										}
+									]
+								},
+								"description": "localhost:8081/admin/user/:{email}"
+							},
+							"response": []
+						},
+						{
+							"name": "USER PUT",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1QGFkbWluLmNvbSIsInVzZXJUeXBlIjoiQURNSU4iLCJleHAiOjE1NTc5MTMwMTd9.QM2K0OIlBhZhl8RXqddTxjQr5Uqdc8leKYvFbxD1q64",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Mr.ZZZ\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/users/:user@user.com",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"users",
+										":user@user.com"
+									],
+									"variable": [
+										{
+											"key": "user",
+											"value": ""
+										}
+									]
+								},
+								"description": "localhost:8081/admin/user/:{email}"
+							},
+							"response": []
+						},
+						{
+							"name": "USER DELETE",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/users/:sample3@abc.com",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"users",
+										":sample3@abc.com"
+									],
+									"variable": [
+										{
+											"key": "sample3",
+											"value": ""
+										}
+									]
+								},
+								"description": "localhost:8081/admin/user/:{email}"
+							},
+							"response": []
+						},
+						{
+							"name": "USER DISABLE",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/users/disable/:sample2@abc.com",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"users",
+										"disable",
+										":sample2@abc.com"
+									],
+									"variable": [
+										{
+											"key": "sample2",
+											"value": ""
+										}
+									]
+								},
+								"description": "localhost:8081/admin/user/disable/:{email}"
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "82eaddb2-92ed-40f6-8905-91e65965bd21",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "37c0e713-d734-47d0-a874-6bed67cab952",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Courses",
+					"item": [
+						{
+							"name": "COURSE POST",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1QGFkbWluLmNvbSIsInVzZXJUeXBlIjoiQURNSU4iLCJleHAiOjE1NTg0MjEwNDZ9.jTCYGEFd1ZGychw71bIOrTy2xIsWXACF27wv4T9D9rI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"courseName\":\"Golang\",\n\t\"description\":\"This the course Description of Google's Golang\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/courses/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"courses",
+										""
+									]
+								},
+								"description": "Body:\n{\n\t\"courseName\":\"<Course Name|>\"\t\n\t\"description\":\"<Course Description|>\"\n}"
+							},
+							"response": []
+						},
+						{
+							"name": "COURSE PUT",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1QGFkbWluLmNvbSIsInVzZXJUeXBlIjoiQURNSU4iLCJleHAiOjE1NTg1MDQwNzF9.JAHbOmRa4zE_RE_BRQAlV3CvTiRIz-bGSeVdgYVgrxI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"courseName\":\"Go\",\n\t\"description\":\"This the UPDATED Description!\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/courses/:id=1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"courses",
+										":id=1"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "COURSE DELETE",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "COURSES GET",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1QGFkbWluLmNvbSIsInVzZXJUeXBlIjoiQURNSU4iLCJleHAiOjE1NTg1MDQwNzF9.JAHbOmRa4zE_RE_BRQAlV3CvTiRIz-bGSeVdgYVgrxI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/courses/all/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"courses",
+										"all",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "COURSE GET BY ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1QGFkbWluLmNvbSIsInVzZXJUeXBlIjoiQURNSU4iLCJleHAiOjE1NTg0MzI4ODJ9._68s8yh7D-57XmsoWrdzajIFRpaQKxogCQNCqn1zvGk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/courses/:id=4",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"courses",
+										":id=4"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"description": "localhost:8081/admin/courses/id={id}"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "ADMIN LOGIN",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "su@admin.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GET CALLS",
+					"item": [
+						{
+							"name": "USER GET BY EMAIL",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbXBsZTk5QGFiYy5jb20iLCJ1c2VyVHlwZSI6IlVTRVIiLCJleHAiOjE1NTcxMzc2NTl9.-gH2gbQfQdPMNvdGIVEcrpBVe-FLCPKIRkKtC1Rcxb0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/:sample2@abc.com",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										":sample2@abc.com"
+									],
+									"variable": [
+										{
+											"key": "sample2",
+											"value": ""
+										}
+									]
+								},
+								"description": "localhost:8081/admin/user/:{email}"
+							},
+							"response": []
+						},
+						{
+							"name": "COURSE GET BY ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdXNlci5jb20iLCJ1c2VyVHlwZSI6IlVTRVIiLCJleHAiOjE1NTg0MzI4NjR9.It1ZrJdT0EqbW3fpL0GxdlE5sW1fdwZL705RLiZIKlU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/courses/id/:id=4",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"courses",
+										"id",
+										":id=4"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								},
+								"description": "localhost:8081/admin/courses/id={id}"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "POST CALLS",
+					"item": [
+						{
+							"name": "USER Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1QGFkbWluLmNvbSIsInVzZXJUeXBlIjoiQURNSU4iLCJleHAiOjE1NTc5MTMwMTd9.QM2K0OIlBhZhl8RXqddTxjQr5Uqdc8leKYvFbxD1q64",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Mr.ZZZ\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/admin/users/:user@user.com",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"users",
+										":user@user.com"
+									],
+									"variable": [
+										{
+											"key": "user",
+											"value": ""
+										}
+									]
+								},
+								"description": "localhost:8081/admin/user/:{email}"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "USER LOGIN",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "user@user.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7cf3523f-8fb8-4c78-9573-31738a0762bd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "86b06c8e-9de4-4212-9165-63989644b25a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

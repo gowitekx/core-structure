@@ -1,0 +1,9 @@
+port="9001" #server port
+siteurl="http://localhost:8081" #
+environment=0
+databaseserver="localhost"
+databasename="infinity"
+username="root"
+password="password"
+logfile="/home/anant/go/src/github.com/infinity-framework/backend/logs/"
+jwtsecretkey="secret"

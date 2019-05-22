@@ -8,8 +8,8 @@ import (
 
 	"github.com/casbin/casbin"
 	jwt "github.com/dgrijalva/jwt-go"
-	v1 "github.com/infinity-framework/backend/api/v1"
-	"github.com/infinity-framework/backend/configs"
+	v1 "github.com/gowitekx/core-structure/backend/api/v1"
+	"github.com/gowitekx/core-structure/backend/configs"
 )
 
 //RequestMiddleware Struct

@@ -7,9 +7,9 @@ import (
 	"golang.org/x/crypto/bcrypt"
 
 	jwt "github.com/dgrijalva/jwt-go"
-	"github.com/infinity-framework/backend/api/models"
-	"github.com/infinity-framework/backend/api/v1/repository"
-	"github.com/infinity-framework/backend/configs"
+	"github.com/gowitekx/core-structure/backend/api/models"
+	"github.com/gowitekx/core-structure/backend/api/v1/repository"
+	"github.com/gowitekx/core-structure/backend/configs"
 )
 
 type AllUserResponse struct {

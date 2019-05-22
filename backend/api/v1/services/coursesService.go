@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/infinity-framework/backend/api/models"
-	"github.com/infinity-framework/backend/api/v1/repository"
+	"github.com/gowitekx/core-structure/backend/api/models"
+	"github.com/gowitekx/core-structure/backend/api/v1/repository"
 )
 
 //AllCoursesResponse Struct

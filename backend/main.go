@@ -7,14 +7,14 @@ import (
 	handler "github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 
-	"github.com/infinity-framework/backend/api"
-	"github.com/infinity-framework/backend/api/v1/handlers"
-	"github.com/infinity-framework/backend/api/v1/middleware"
-	"github.com/infinity-framework/backend/api/v1/repository"
-	"github.com/infinity-framework/backend/api/v1/services"
-	"github.com/infinity-framework/backend/configs"
-	"github.com/infinity-framework/backend/database"
-	"github.com/infinity-framework/backend/database/connection"
+	"github.com/gowitekx/core-structure/backend/api"
+	"github.com/gowitekx/core-structure/backend/api/v1/handlers"
+	"github.com/gowitekx/core-structure/backend/api/v1/middleware"
+	"github.com/gowitekx/core-structure/backend/api/v1/repository"
+	"github.com/gowitekx/core-structure/backend/api/v1/services"
+	"github.com/gowitekx/core-structure/backend/configs"
+	"github.com/gowitekx/core-structure/backend/database"
+	"github.com/gowitekx/core-structure/backend/database/connection"
 )
 
 //initialize the code

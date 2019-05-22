@@ -28,7 +28,7 @@ var Log = logrus.New()
 func (c *Param) Read(environment string) {
 	var filepath = "./configs/"
 	if environment == "testing" {
-		filepath = "github.com/infinity-framework/backend/configs/" //required to change path
+		filepath = "github.com/gowitekx/core-structure/backend/configs/" //required to change path
 	}
 	viper.SetConfigName("config") // no need to include file extension
 	viper.AddConfigPath(filepath) // os.Getenv("configpath") optionally look for config in the working directory

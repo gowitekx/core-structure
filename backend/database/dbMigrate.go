@@ -8,7 +8,7 @@ import (
 	"github.com/golang-migrate/migrate"
 	"github.com/golang-migrate/migrate/database/mysql"
 	_ "github.com/golang-migrate/migrate/source/file"
-	"github.com/infinity-framework/backend/configs"
+	"github.com/gowitekx/core-structure/backend/configs"
 )
 
 //DBMigrate -used for database migration
@@ -24,7 +24,7 @@ func DBMigrate() {
 	}
 
 	m, error := migrate.NewWithDatabaseInstance(
-		"file:/home/anant/go/src/github.com/infinity-framework/backend/database/migrations",
+		"file:/home/anant/go/src/github.com/gowitekx/core-structure/backend/database/migrations",
 		"mysql",
 		driver,
 	)

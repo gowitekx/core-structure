@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/infinity-framework/backend/configs"
+	"github.com/gowitekx/core-structure/backend/configs"
 
 	"github.com/jinzhu/gorm"
 )

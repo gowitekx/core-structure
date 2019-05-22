@@ -3,9 +3,9 @@ package repository
 import (
 	"context"
 
-	"github.com/infinity-framework/backend/api/models"
-	"github.com/infinity-framework/backend/configs"
-	"github.com/infinity-framework/backend/database/connection"
+	"github.com/gowitekx/core-structure/backend/api/models"
+	"github.com/gowitekx/core-structure/backend/configs"
+	"github.com/gowitekx/core-structure/backend/database/connection"
 	"github.com/jinzhu/gorm"
 )
 

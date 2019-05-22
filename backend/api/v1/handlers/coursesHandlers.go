@@ -5,13 +5,13 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/infinity-framework/backend/api/models"
-	v1 "github.com/infinity-framework/backend/api/v1"
-	"github.com/infinity-framework/backend/configs"
+	"github.com/gowitekx/core-structure/backend/api/models"
+	v1 "github.com/gowitekx/core-structure/backend/api/v1"
+	"github.com/gowitekx/core-structure/backend/configs"
 
-	"github.com/infinity-framework/backend/api"
-	"github.com/infinity-framework/backend/api/v1/middleware"
-	"github.com/infinity-framework/backend/api/v1/services"
+	"github.com/gowitekx/core-structure/backend/api"
+	"github.com/gowitekx/core-structure/backend/api/v1/middleware"
+	"github.com/gowitekx/core-structure/backend/api/v1/services"
 )
 
 //HTTPCoursesHandler Struct

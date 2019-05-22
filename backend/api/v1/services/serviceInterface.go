@@ -3,7 +3,7 @@ package services
 import (
 	"context"
 
-	"github.com/infinity-framework/backend/api/models"
+	"github.com/gowitekx/core-structure/backend/api/models"
 )
 
 //UserServices Inteface
